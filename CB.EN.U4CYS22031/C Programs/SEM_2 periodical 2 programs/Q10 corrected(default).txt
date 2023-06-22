@@ -1,0 +1,18 @@
+#include <stdio.h>
+struct comp{
+	int real,imag;}
+void main(){
+	struct comp c[3];
+	printf ("Enter real and imaginary part of 1st number: ");
+	scanf ("%d",&c[0].real);
+	scanf ("%d",&c[0].imag);
+	printf ("Enter real and imaginary part of 2nd number: ");
+	scanf ("%d",&c[1].real);
+	scanf ("%d",&c[1].imag);
+
+	c[2].real = c[0].real*c[1].real - c[0].imag*c[1].imag;
+	c[2].imag = c[0].real*c[1].imag + c[0].imag*c[1].real;
+
+	printf("The multiplication of the two numbers are: \n");
+	printf("%d + i%d",c[2].real,c[2].imag);
+}
